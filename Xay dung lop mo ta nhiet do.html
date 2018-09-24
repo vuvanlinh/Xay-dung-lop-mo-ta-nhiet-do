@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Temperature = function (num) {
+        if (num > -273) {
+            this.getCelsius = function () {
+                alert("Do C la : " + num);
+            };
+
+            this.getFahrenheit = function () {
+                let fahrenheit = (num * 1.8) + 32;
+                alert("do Farenheit la : " + fahrenheit);
+            };
+
+            this.getKenvin = function () {
+                let kenvin = num + 273.15;
+                alert("do Kenvin la : " + kenvin);
+            }
+        } else alert("Nhiet do qua thap");
+
+    };
+
+    let temperature = new Temperature(25);
+    temperature.getCelsius();
+    temperature.getFahrenheit();
+    temperature.getKenvin();
+
+</script>
+</body>
+</html>
